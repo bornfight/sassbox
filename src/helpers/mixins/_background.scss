@@ -1,0 +1,19 @@
+@import "../variables/routes";
+
+@mixin c-background($background-image, $background-position: 'top left', $background-repeat: 'no-repeat') {
+    @if $img-link-type == "REL" {
+        background-image: url('#{$routeREL}#{$background-image}');
+    } @else if $img-link-type == "ABS" {
+        background-image: url('#{$routeABS}#{$background-image}');
+    }
+    background-repeat: #{$background-repeat};
+    background-position: #{$background-position};
+}
+
+@mixin c-background-image($background-image) {
+    @if $img-link-type == "REL" {
+        background-image: url('#{$routeREL}#{$background-image}');
+    } @else if $img-link-type == "ABS" {
+        background-image: url('#{$routeABS}#{$background-image}');
+    }
+}

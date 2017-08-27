@@ -1,0 +1,13 @@
+@import "../functions/transition-type";
+
+@mixin transition($css: all, $seconds: 0.2s, $delay: 0s, $type: 5) {
+    transition: $css $seconds get-transition-type($type) $delay;
+}
+
+@mixin transition-extended($animation, $duration: 0.2s, $delay: 0s, $type: 1, $iteration-count: infinite) {
+    animation-iteration-count: $iteration-count;
+    animation-duration: $duration;
+    animation-delay: $delay;
+    animation-name: $animation;
+    animation-timing-function: get-transition-type($type);
+}

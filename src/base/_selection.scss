@@ -1,0 +1,13 @@
+@import "../helpers/variables/colors";
+
+// firefox specific
+::-moz-selection {
+    // TODO: remove this, autoprefixer can handle vendor prefixes for selection
+    background-color: $default-selection-bg-color;
+    color: $default-selection-text-color;
+}
+
+::selection {
+    background-color: $default-selection-bg-color;
+    color: $default-selection-text-color;
+}

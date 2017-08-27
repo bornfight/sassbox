@@ -1,0 +1,6 @@
+$transition-type-array: linear, ease, ease-in, ease-out, ease-in-out;
+
+@function get-transition-type($some-number) {
+    $transition-type: nth($transition-type-array, $some-number);
+    @return $transition-type;
+}

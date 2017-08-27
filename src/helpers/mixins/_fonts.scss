@@ -1,0 +1,46 @@
+@mixin font-face($font-name, $font-filename: $font-name, $version: 1) {
+    @font-face {
+        font-family: '#{$font-name}';
+        @if $img-link-type == "REL" {
+            src: url('#{$routeRELfont+$font-filename}.eot?#{$version}');
+            src: url('#{$routeRELfont+$font-filename}.eot?#{$version}#iefix') format('embedded-opentype'),
+            url('#{$routeRELfont+$font-filename}.woff2?#{$version}') format('woff2'),
+            url('#{$routeRELfont+$font-filename}.woff?#{$version}') format('woff'),
+            url('#{$routeRELfont+$font-filename}.svg?#{$version}#wf') format('svg'),
+            url('#{$routeRELfont+$font-filename}.ttf?#{$version}') format('truetype');
+        } @else if $img-link-type == "ABS" {
+            src: url('#{$routeABSfont+$font-filename}.eot?#{$version}');
+            src: url('#{$routeABSfont+$font-filename}.eot?#{$version}#iefix') format('embedded-opentype'),
+            url('#{$routeABSfont+$font-filename}.woff2?#{$version}') format('woff2'),
+            url('#{$routeABSfont+$font-filename}.woff?#{$version}') format('woff'),
+            url('#{$routeABSfont+$font-filename}.svg?#{$version}#wf') format('svg'),
+            url('#{$routeABSfont+$font-filename}.ttf?#{$version}') format('truetype');
+        }
+        font-weight: normal;
+        font-style: normal;
+    }
+}
+
+@mixin font-size-map($fs-map, $function: rem) {
+    @each $fs-breakpoint, $fs-font-size in $fs-map {
+        @if $fs-breakpoint == null {
+            @if $function == rem {
+                font-size: rem($fs-font-size);
+            } @else if $function == em {
+                font-size: em($fs-font-size);
+            } @else {
+                font-size: $fs-font-size;
+            }
+        } @else {
+            @include breakpoint($fs-breakpoint) {
+                @if $function == rem {
+                    font-size: rem($fs-font-size);
+                } @else if $function == em {
+                    font-size: em($fs-font-size);
+                } @else {
+                    font-size: $fs-font-size;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,65 @@
+//#######################################
+//## PREDEFINED COLORS ##################
+//#######################################
+
+//Black
+$c-black-100: rgba(0, 0, 0, 1) !default;
+$c-black-90: rgba(0, 0, 0, 0.9) !default;
+$c-black-80: rgba(0, 0, 0, 0.8) !default;
+$c-black-70: rgba(0, 0, 0, 0.7) !default;
+$c-black-60: rgba(0, 0, 0, 0.6) !default;
+$c-black-50: rgba(0, 0, 0, 0.5) !default;
+$c-black-40: rgba(0, 0, 0, 0.4) !default;
+$c-black-30: rgba(0, 0, 0, 0.3) !default;
+$c-black-20: rgba(0, 0, 0, 0.2) !default;
+$c-black-10: rgba(0, 0, 0, 0.1) !default;
+$c-black-0: rgba(0, 0, 0, 0) !default;
+
+//White
+$c-white-100: rgba(255, 255, 255, 1) !default;
+$c-white-90: rgba(255, 255, 255, 0.9) !default;
+$c-white-80: rgba(255, 255, 255, 0.8) !default;
+$c-white-70: rgba(255, 255, 255, 0.7) !default;
+$c-white-60: rgba(255, 255, 255, 0.6) !default;
+$c-white-50: rgba(255, 255, 255, 0.5) !default;
+$c-white-40: rgba(255, 255, 255, 0.4) !default;
+$c-white-30: rgba(255, 255, 255, 0.3) !default;
+$c-white-20: rgba(255, 255, 255, 0.2) !default;
+$c-white-10: rgba(255, 255, 255, 0.1) !default;
+$c-white-0: rgba(255, 255, 255, 0) !default;
+
+$c-white: #ffffff !default;
+$c-black: #000000 !default;
+
+//#######################################
+//## BRAND COLORS #######################
+//#######################################
+
+// Typical Social-brand colors
+$fb-color: #3b5998 !default;
+$twitter-color: #55acee !default;
+$gplus-color: #dd4b39 !default;
+$linkedin-color: #007bb6 !default;
+$instagram-color: #517fa4 !default;
+$pinterest-color: #cb2027 !default;
+$flickr-1-color: #ff0084 !default;
+$flickr-2-color: #0063dc !default;
+$tumblr-color: #32506d !default;
+$dribble-color: #ea4c89 !default;
+$behance-color: #1769ff !default;
+$vine-color: #00bf8f !default;
+$spotify-color: #2ebd59 !default;
+$tripadvisor-color: #589442 !default;
+$yahoo-color: #400191 !default;
+$youtube-color: #cd201f !default;
+
+
+//#######################################
+//## DEFAULT COLORS #####################
+//#######################################
+
+$default-body-text-color: $c-black !default;
+$default-body-link-color: $c-black !default;
+
+$default-selection-text-color: $c-white !default;
+$default-selection-bg-color: $c-black !default;

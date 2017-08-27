@@ -1,0 +1,25 @@
+@import "../variables/typography";
+
+@function line-height($psd-font-size, $psd-line-height: $psd-font-size) {
+    @return $psd-line-height/$psd-font-size;
+}
+
+@function em($pixels, $context: $browser-context) {
+    @if (unitless($pixels)) {
+        $pixels: $pixels * 1px;
+    }
+    @if (unitless($context)) {
+        $context: $context * 1px;
+    }
+    @return $pixels / $context * 1em;
+}
+
+@function rem($pixels, $context: $browser-context) {
+    @if (unitless($pixels)) {
+        $pixels: $pixels * 1px;
+    }
+    @if (unitless($context)) {
+        $context: $context * 1px;
+    }
+    @return $pixels / $context * 1rem;
+}

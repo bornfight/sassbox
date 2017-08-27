@@ -1,0 +1,9 @@
+// Placeholder text
+$pseudo-phprefix: "::-webkit-input-placeholder" "::-moz-placeholder" ":-ms-input-placeholder" "::placeholder";
+@mixin placeholder {
+    @each $pseudo in $pseudo-phprefix {
+        @at-root #{&}#{$pseudo} {
+            @content
+        }
+    }
+}

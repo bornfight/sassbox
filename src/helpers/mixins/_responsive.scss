@@ -1,0 +1,31 @@
+@mixin breakpoint($mq01: 0, $mq2: null, $maxmin: max-width, $orientation: null) {
+
+    @if $mq2 == null {
+
+        @if $orientation != null {
+            @media ($maxmin: $mq01) and (orientation: $orientation) {
+                @content;
+            }
+        }
+        @else {
+            @media ($maxmin: $mq01) {
+                @content;
+            }
+        }
+
+    } @else {
+
+        @if $orientation != null {
+            @media (min-width: $mq01) and (max-width: $mq2) and (orientation: $orientation) {
+                @content;
+            }
+        }
+        @else {
+            @media (min-width: $mq01) and (max-width: $mq2) {
+                @content;
+            }
+        }
+
+    }
+
+}
