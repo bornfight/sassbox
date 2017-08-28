@@ -1,0 +1,37 @@
+{
+  "name": "sassbox",
+  "version": "0.1.0",
+  "description": "Sass toolkit for bootstrapping your front end project.",
+  "main": "src/_sassbox.scss",
+  "scripts": {
+    "test": "npm run lint && npm run compile",
+    "compile": "./node_modules/node-sass/bin/node-sass test/scss/test.scss test/css/test.css",
+    "lint": "node ./node_modules/stylelint/bin/stylelint src/**/*.scss"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/degordian/sassbox.git"
+  },
+  "keywords": [
+    "sass",
+    "toolkit",
+    "layout",
+    "helpers"
+  ],
+  "author": "Degordian Front-end <frontend@degordian.com> (https://www.degordian.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/degordian/sassbox/issues"
+  },
+  "homepage": "https://github.com/degordian/sassbox#readme",
+  "devDependencies": {
+    "node-sass": "^4.5.3",
+    "stylelint": "^8.0.0",
+    "stylelint-config-recommended": "^1.0.0"
+  },
+  "dependencies": {},
+  "stylelint": {
+    "extends": "stylelint-config-recommended",
+    "rules": {}
+  }
+}
