@@ -1,5 +1,5 @@
 {
-  "name": "sassbox",
+  "name": "@degordian/sassbox",
   "version": "0.1.0",
   "description": "Sass toolkit for bootstrapping your front end project.",
   "main": "src/_sassbox.scss",
@@ -33,5 +33,8 @@
   "stylelint": {
     "extends": "stylelint-config-recommended",
     "rules": {}
+  },
+  "directories": {
+    "test": "test"
   }
 }
