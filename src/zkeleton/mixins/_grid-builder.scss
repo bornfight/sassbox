@@ -1,0 +1,55 @@
+@import "../variables/grid-values";
+
+@mixin grid-make-row($element-class: 'row', $gutter-size: $zgrid-default-gutter) {
+
+    .#{$element-class} {
+
+        margin-left: ($gutter-size/-2);
+        margin-right: ($gutter-size/-2);
+
+        &:before, &:after {
+            content: " ";
+            display: table;
+        }
+
+        &:after {
+            clear: both;
+        }
+
+    }
+
+}
+
+@mixin grid-make-grid($element-class: 'col', $col-number: $z-grid-number, $gutter-size: $zgrid-default-gutter, $float: true, $offset: false) {
+
+    @if $float {
+
+        [class^="#{$element-class}-"], [class*=" #{$element-class}-"] {
+
+            float: left;
+            min-height: 1px;
+            position: relative;
+            padding-left: ($gutter-size/2);
+            padding-right: ($gutter-size/2);
+
+        }
+
+    }
+
+    @for $i from (0 + 1) through $col-number {
+
+        .#{$element-class}-#{$i} {
+            width: percentage((1/$col-number)*$i);
+        }
+
+        @if $offset {
+
+            .#{$element-class}-offset-#{$i} {
+                margin-left: percentage((1/$col-number)*$i);
+            }
+
+        }
+
+    }
+
+}

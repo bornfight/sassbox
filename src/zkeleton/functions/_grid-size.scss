@@ -1,0 +1,11 @@
+@import "../variables/grid-values";
+
+@function grid-value($value, $columns: $z-grid-number, $percentage: true) {
+    @if ($percentage == true) {
+        @return percentage((1/$columns)*$value);
+    }
+
+    @else {
+        @return (1/$columns)*$value;
+    }
+}

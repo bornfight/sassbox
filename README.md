@@ -131,4 +131,9 @@ $font-primary: Helvetica, Arial, sans-serif !default;
 /* _routes.scss */
 
 $img-link-type: REL !default;
+
+/* _grid-values.scss */
+
+$z-grid-number: 24 !default;
+$zgrid-default-gutter: 0 !default;
 ```
