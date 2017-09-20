@@ -68,7 +68,7 @@ or import individual modules:
 @import "~@degordian/sassbox/src/base";
 @import "~@degordian/sassbox/src/helpers";
 @import "~@degordian/sassbox/src/layout";
-@import "~@degordian/sassbox/src/layout";
+@import "~@degordian/sassbox/src/zkeleton";
 ```
 
 
