@@ -1,6 +1,6 @@
 {
   "name": "@degordian/sassbox",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Sass toolkit for bootstrapping your front end project.",
   "main": "src/_sassbox.scss",
   "scripts": {
