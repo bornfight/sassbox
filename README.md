@@ -6,7 +6,7 @@ Set of SCSS helpers, mixins and base css to startup your front end project.
 Installation
 ------------
 
-npm install --save sassbox
+npm install --save @degordian/sassbox
 
 Usage
 ------------
@@ -19,7 +19,7 @@ Usage
 gulp.task('sass', function() {
   return gulp.src('path_to_scss/style.scss')
       .pipe(sass({
-          includePaths: ['node_modules/sassbox/src']
+          includePaths: ['node_modules/@degordian/sassbox/src']
       })
       .pipe(gulp.dest('dist/css'));
 });
@@ -35,6 +35,7 @@ or import individual modules:
 @import "base";
 @import "helpers";
 @import "layout";
+@import "zkeleton";
 ```
 
 
@@ -60,13 +61,14 @@ __Usage in SCSS__
 
 ```
 /* style.scss */
-@import "~sassbox/src/sassbox";
+@import "~@degordian/sassbox/src/sassbox";
 
 or import individual modules:
 
-@import "~sassbox/src/base";
-@import "~sassbox/src/helpers";
-@import "~sassbox/src/layout";
+@import "~@degordian/sassbox/src/base";
+@import "~@degordian/sassbox/src/helpers";
+@import "~@degordian/sassbox/src/layout";
+@import "~@degordian/sassbox/src/layout";
 ```
 
 
