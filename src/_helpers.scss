@@ -6,6 +6,13 @@
 @import "helpers/variables/transition";
 @import "helpers/variables/colors";
 //#######################################
+//## FUNCTIONS ##########################
+//#######################################
+@import "helpers/functions/number";
+@import "helpers/functions/str-split";
+@import "helpers/functions/typography-sizing";
+@import "helpers/functions/transition-type";
+//#######################################
 //## MIXINS #############################
 //#######################################
 @import "helpers/mixins/responsive";
@@ -16,8 +23,3 @@
 @import "helpers/mixins/placeholder";
 @import "helpers/mixins/itemblock";
 @import "helpers/mixins/z-index";
-//#######################################
-//## FUNCTIONS ##########################
-//#######################################
-@import "helpers/functions/typography-sizing";
-@import "helpers/functions/transition-type";
