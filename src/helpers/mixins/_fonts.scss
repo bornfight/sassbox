@@ -24,21 +24,33 @@
 @mixin font-size-map($fs-map, $function: rem) {
     @each $fs-breakpoint, $fs-font-size in $fs-map {
         @if $fs-breakpoint == null {
+            $fs: $fs-font-size;
+            @if type-of($fs-font-size) == 'string' {
+                $fs: number(nth(str-two-split($fs-font-size, '/'), 1));
+                $lh: number(nth(str-two-split($fs-font-size, '/'), 2));
+                line-height: line-height($fs, $lh);
+            }
             @if $function == rem {
-                font-size: rem($fs-font-size);
+                font-size: rem($fs);
             } @else if $function == em {
-                font-size: em($fs-font-size);
+                font-size: em($fs);
             } @else {
-                font-size: $fs-font-size;
+                font-size: $fs#{$function};
             }
         } @else {
+            $fs: $fs-font-size;
             @include breakpoint($fs-breakpoint) {
+                @if type-of($fs-font-size) == 'string' {
+                    $fs: number(nth(str-two-split($fs-font-size, '/'), 1));
+                    $lh: number(nth(str-two-split($fs-font-size, '/'), 2));
+                    line-height: line-height($fs, $lh);
+                }
                 @if $function == rem {
-                    font-size: rem($fs-font-size);
+                    font-size: rem($fs);
                 } @else if $function == em {
-                    font-size: em($fs-font-size);
+                    font-size: em($fs);
                 } @else {
-                    font-size: $fs-font-size;
+                    font-size: $fs#{$function};
                 }
             }
         }

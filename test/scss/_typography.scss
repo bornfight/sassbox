@@ -1,0 +1,16 @@
+.test {
+
+    &__fontsize {
+
+        padding: 20px;
+
+        $mobile-breakpoint: 640px;
+        $fs-h1: (null: 16, 1440px: '16/18', $mobile-breakpoint: '12/14', 480px: 16);
+
+        h1 {
+            @include font-size-map($fs-h1);
+        }
+
+    }
+
+}

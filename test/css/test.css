@@ -129,3 +129,18 @@ a {
 /*   ✔ [assert-equal] should work with a unitless target value */
 /*  */
 /*  */
+.test__fontsize {
+  padding: 20px; }
+  .test__fontsize h1 {
+    font-size: 0.88889rem; }
+    @media (max-width: 1440px) {
+      .test__fontsize h1 {
+        line-height: 1.125;
+        font-size: 0.88889rem; } }
+    @media (max-width: 640px) {
+      .test__fontsize h1 {
+        line-height: 1.16667;
+        font-size: 0.66667rem; } }
+    @media (max-width: 480px) {
+      .test__fontsize h1 {
+        font-size: 0.88889rem; } }
