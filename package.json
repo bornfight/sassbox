@@ -26,6 +26,7 @@
   "homepage": "https://github.com/degordian/sassbox#readme",
   "devDependencies": {
     "node-sass": "^4.5.3",
+    "sass-true": "^3.0.2",
     "stylelint": "^8.0.0",
     "stylelint-config-recommended": "^1.0.0",
     "stylelint-scss": "^2.1.0"

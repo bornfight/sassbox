@@ -1,0 +1,15 @@
+$inspect: true;
+
+@include test-module('px-to-vw() [function]') {
+    @include test('should return zero vw with default arguments') {
+        $actual: px-to-vw();
+        $expected: 0vw;
+        @include assert-equal($actual, $expected, $inspect: true);
+    }
+
+    @include test('should work with a unitless target value') {
+        $actual: px-to-vw(50);
+        $expected: 3.47222vw;
+        @include assert-equal($actual, $expected, $inspect: true);
+    }
+}

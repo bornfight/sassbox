@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -119,81 +120,12 @@ a {
     display: block;
     visibility: hidden; }
 
-.row [class^="col-"], .row [class*=" col-"] {
-  float: left;
-  min-height: 1px;
-  position: relative;
-  padding-left: 0;
-  padding-right: 0; }
-
-.row .col-1 {
-  width: 4.16667%; }
-
-.row .col-2 {
-  width: 8.33333%; }
-
-.row .col-3 {
-  width: 12.5%; }
-
-.row .col-4 {
-  width: 16.66667%; }
-
-.row .col-5 {
-  width: 20.83333%; }
-
-.row .col-6 {
-  width: 25%; }
-
-.row .col-7 {
-  width: 29.16667%; }
-
-.row .col-8 {
-  width: 33.33333%; }
-
-.row .col-9 {
-  width: 37.5%; }
-
-.row .col-10 {
-  width: 41.66667%; }
-
-.row .col-11 {
-  width: 45.83333%; }
-
-.row .col-12 {
-  width: 50%; }
-
-.row .col-13 {
-  width: 54.16667%; }
-
-.row .col-14 {
-  width: 58.33333%; }
-
-.row .col-15 {
-  width: 62.5%; }
-
-.row .col-16 {
-  width: 66.66667%; }
-
-.row .col-17 {
-  width: 70.83333%; }
-
-.row .col-18 {
-  width: 75%; }
-
-.row .col-19 {
-  width: 79.16667%; }
-
-.row .col-20 {
-  width: 83.33333%; }
-
-.row .col-21 {
-  width: 87.5%; }
-
-.row .col-22 {
-  width: 91.66667%; }
-
-.row .col-23 {
-  width: 95.83333%; }
-
-.row .col-24 {
-  width: 100%; }
+/* # Module: px-to-vw() [function] */
+/* ------------------------------- */
+/* Test: should return zero vw with default arguments */
+/*   ✔ [assert-equal] should return zero vw with default arguments */
+/*  */
+/* Test: should work with a unitless target value */
+/*   ✔ [assert-equal] should work with a unitless target value */
+/*  */
+/*  */
