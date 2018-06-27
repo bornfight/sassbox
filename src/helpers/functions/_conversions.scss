@@ -1,3 +1,16 @@
+/// Function for converting pixel values to viewport width units
+/// @access public
+/// @link https://caniuse.com/#feat=viewport-units
+/// @example scss
+///     px-to-vw(144)
+///     // 10vw
+/// @example scss
+///     px-to-vw(20)
+///     // 1.38889vw
+/// @param {number} $target [0] - number of pixels to convert
+/// @param {number} $context [1440] - viewport size used for conversion
+/// @return {string} - converted viewport units
+///
 @function px-to-vw($target: 0, $context: 1440) {
     $vw-context: ($context * 0.01);
     @return ($target / $vw-context) * 1vw;

@@ -1,3 +1,24 @@
+/// Mixin for abstracting media queries
+/// @content write SCSS that belongs to the generated media query
+/// @todo change first parameter to required
+/// @param {number} $mq01 [0] - max width or min width breakpoint, depending on the $maxmin parameter
+/// @param {number} $mq02 [null] - max width breakpoint, used if two breakpoints are passed
+/// @param {string} $maxmin [max-width] - determines which type of breakpoint will be used if one is passed (max-width or min-width)
+/// @param {string} $orientation [null] - used for setting additional orientation in a media query (can be landscape or portrait)
+/// @output Wraps content passed inside a media query
+///
+/// @example scss
+///     .body {
+///         @include breakpoint(960px) {
+///             background-color: grey;
+///         }
+///     }
+/// @example scss
+///     .body {
+///         @include breakpoint($breakpoint-big, null, min-width) {
+///             background-color: grey;
+///         }
+///     }
 @mixin breakpoint($mq01: 0, $mq2: null, $maxmin: max-width, $orientation: null) {
 
     @if $mq2 == null {

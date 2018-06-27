@@ -110,6 +110,10 @@ a {
   background-color: #000000;
   color: #ffffff; }
 
+@media (max-width: 960px) {
+  body {
+    background-color: black; } }
+
 .clearfix {
   display: block; }
   .clearfix:after {

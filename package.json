@@ -6,7 +6,8 @@
   "scripts": {
     "test": "npm run lint && npm run compile",
     "compile": "node-sass test/scss/test.scss test/css/test.css",
-    "lint": "stylelint \"src/**/*.scss\""
+    "lint": "stylelint \"src/**/*.scss\"",
+    "sassdoc": "sassdoc ./src"
   },
   "repository": {
     "type": "git",
@@ -25,8 +26,8 @@
   },
   "homepage": "https://github.com/degordian/sassbox#readme",
   "devDependencies": {
-    "node-sass": "^4.5.3",
-    "sass-true": "^3.0.2",
+    "node-sass": "^4.9.0",
+    "sass-true": "^3.1.0",
     "stylelint": "^8.0.0",
     "stylelint-config-recommended": "^1.0.0",
     "stylelint-scss": "^2.1.0"
